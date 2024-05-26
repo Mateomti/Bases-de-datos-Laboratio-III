@@ -1,5 +1,16 @@
 <?php
-$user = $_GET['user'];
+session_start();
+
+if (isset($_SESSION['user'])) {
+  $user = $_SESSION['user'];
+} 
+else {
+  echo"
+  <script>
+  alert('Debe iniciar sesion primero.');
+  header('Location: ../index.html');
+  </script>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -14,10 +25,10 @@ $user = $_GET['user'];
         <h1><img src="img/logo_utn.png" /></h1>
         <ul>
           <?php
-          echo"<li><a class='navbar-items' href='perfil.php?user=$user'>Perfil</a></li>"; 
+          echo"<li><a class='navbar-items' href='perfil.php'>Perfil</a></li>"; 
           ?>
           <li>
-            <a class='navbar-items' href="index.html">Cerrar sesion</a>
+            <a class='navbar-items' href="../index.html">Cerrar sesion</a>
           </li>
         </ul>
       </nav>
@@ -26,9 +37,9 @@ $user = $_GET['user'];
     <table class="tabla">
       <tr>
         <td class="ltd">
-          <a href="../Ejercicio1-Colegio/index.html"
-            ><center><img src="img/logo_utn.png" /></center
-          ></a>
+          <a href="../Ejercicio1-Colegio/index.php">
+            <center><img src="img/logo_utn.png" /></center>
+          </a>
           <p><center>Ejercicio 1 | Colegio</center></p>
         </td>
         <td class="ltd">

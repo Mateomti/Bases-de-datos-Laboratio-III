@@ -1,6 +1,17 @@
 <?php
 include('conexion.php');
-  $user = $_GET['user'];
+session_start();
+
+if (isset($_SESSION['user'])) {
+  $user = $_SESSION['user'];
+} 
+else {
+  echo"
+  <script>
+  alert('Debe iniciar sesion primero.');
+  header('Location: ../index.html');
+  </script>";
+}
   ?>
 
 
@@ -16,10 +27,10 @@ include('conexion.php');
         <h1><img src="img/logo_utn.png" /></h1>
         <ul>
           <?php
-          echo"<li><a class='navbar-items' href='menu.php?user=$user'>Menu Principal</a></li>"; 
+          echo"<li><a class='navbar-items' href='menu.php'>Menu Principal</a></li>"; 
           ?>
           <li>
-            <a class="navbar-items-cerrar" href="index.html">Cerrar sesion</a>
+            <a class="navbar-items-cerrar" href="../index.html">Cerrar sesion</a>
           </li>
         </ul>
       </nav>

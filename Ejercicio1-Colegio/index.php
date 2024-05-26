@@ -1,3 +1,14 @@
+<?php
+session_start(); // Inicia la sesión
+
+if (isset($_SESSION['user'])) {
+    $user = $_SESSION['user'];
+} else {
+    // Si no hay usuario en la sesión, redirigir al inicio de sesión
+    header("Location: ../index.html");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -20,7 +31,7 @@
     
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Ejercicio 1</a>
+        <a class="navbar-brand" href="index.php">Ejercicio 1</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -75,6 +86,27 @@
                 <li><a class="dropdown-item" href="cursada/reg_cursada.php">Cursada</a></li>
               </ul>
             </li>
+            <?php
+            echo"
+            <a
+                class='nav-link'
+                href='../Usuarios/menu.php?user=$user'
+                role='button'
+                aria-expanded='false'
+              >
+                Menu Principal
+              </a>";
+            echo"
+            <a
+                class='nav-link'
+                href='../index.html'
+                role='button'
+                aria-expanded='false'
+              >
+                Cerrar sesion
+              </a>";
+            
+            ?>
             
         </div>
       </div>

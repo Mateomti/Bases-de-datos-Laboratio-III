@@ -2,13 +2,17 @@
 <html lang="es">
   <head>
     <title>Usuarios</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Usuarios/style.css" />
   </head>
   <body>
     <h1 class="titulo">Trabajo Laboratorio III</h1>
 
     <div class="login">
-      <form class="formulario" action="procesarlogin.php" method="post">
+      <form
+        class="formulario"
+        action="Usuarios/procesarlogin.php"
+        method="post"
+      >
         <h1>Inicio de sesion</h1>
         <label> Ingrese su usuario</label>
         <input type="text" id="user" name="user" required />
@@ -17,7 +21,7 @@
         <input class="submit" type="submit" value="Iniciar sesion" />
         <p>
           Eres nuevo?
-          <a href="registrar.html">Registrate aqui!</a>
+          <a href="Usuarios/registrar.html">Registrate aqui!</a>
         </p>
       </form>
     </div>

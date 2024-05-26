@@ -21,7 +21,7 @@ include('conexion.php');
           echo"<li><a class='navbar-items' href='menu.php?user=$user'>Menu Principal</a></li>"; 
           ?>
           <li>
-            <a class="navbar-items-cerrar" href="index.html">Cerrar sesion</a>
+            <a class="navbar-items-cerrar" href="../index.html">Cerrar sesion</a>
           </li>
         </ul>
       </nav>

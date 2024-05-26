@@ -7,7 +7,7 @@ $res = mysqli_query($con, $ver);
 if ($res){
   echo"<script>
   alert('El usuario ha sido eliminado correctamente!');
-  window.location.href = 'index.html';
+  window.location.href = '../index.html';
   </script>";
 }
 

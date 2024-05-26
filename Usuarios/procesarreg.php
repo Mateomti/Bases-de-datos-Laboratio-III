@@ -19,7 +19,7 @@
     if ($valor){
       echo"<script>
       alert('Ese nombre de usuario ya está registrado en la BD. Intente nuevamente!');
-      window.location.href = 'index.html';
+      window.location.href = '../index.html';
       </script>";
     }
     else{
@@ -28,7 +28,7 @@
       if ($res){
         echo"<script>
         alert('El registro ha sido exitoso!');
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
         </script>";
       }
     }

@@ -20,7 +20,7 @@
     
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Ejercicio 1</a>
+        <a class="navbar-brand" href="../index.php">Ejercicio 1</a>
         <button
           class="navbar-toggler"
           type="button"
