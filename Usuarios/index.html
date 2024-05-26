@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="titulo">Trabajo Laboratorio III</h1>
+
+    <div class="login">
+      <form class="formulario" action="procesarlogin.php" method="post">
+        <h1>Inicio de sesion</h1>
+        <label> Ingrese su usuario</label>
+        <input type="text" id="user" name="user" required />
+        <label> Ingrese su contrasenia</label>
+        <input type="password" id="pass" name="pass" required />
+        <input class="submit" type="submit" value="Iniciar sesion" />
+        <p>
+          Eres nuevo?
+          <a href="registrar.html">Registrate aqui!</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

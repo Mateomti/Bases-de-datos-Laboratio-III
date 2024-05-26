@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="titulo">Trabajo Laboratorio III</h1>
+
+    <div class="login">
+      <form action="procesarreg.php" method="post">
+        <h1>Registro de usuario</h1>
+        <label> Registre su usuario</label>
+        <input type="text" id="user" name="user" required />
+        <label> Registre una contrasenia</label>
+        <input type="password" id="pass" name="pass" required />
+        <label> Confirme su contrasenia</label>
+        <input type="password" id="pass2" name="pass2" required />
+        <input class="submit" type="submit" value="Registrarme" />
+        <p>
+          Ya has estado aqui antes?
+          <a href="index.html">Inicia sesion aqui!</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

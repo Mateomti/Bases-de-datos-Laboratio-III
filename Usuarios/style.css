@@ -1,0 +1,200 @@
+body{
+  font-family: Arial, sans-serif;
+  background-color: grey;
+}
+.titulo{
+  margin: 50px 40% 40px 40%;
+  padding: 20px;
+  background-color: lightsteelblue;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 5px rgb(0, 0, 0);
+  text-align: center;
+
+}
+.login{
+  margin: auto;
+  margin-top: 60px;
+  border: 1px solid yellowgreen;
+  width: 400px;
+  height: 500px;
+  color: yellowgreen;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 5px rgba(226, 247, 135, 0.75);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.mod{
+  margin: auto;
+  margin-top: 40px;
+  padding-bottom: 50px;
+  border: 1px solid yellowgreen;
+  width: 400px;
+  height: 500px;
+  color: yellowgreen;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 5px rgba(226, 247, 135, 0.75);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+form{
+  display: block;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 100%;
+  height: 110%;
+  backdrop-filter: brightness(20%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+h1{
+  font-weight: normal;
+  font-size: 24px;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+label{
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  padding-left: 10px;
+}
+input{
+  background : rgba(255, 255, 255, 0.3);
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  padding: 0px 20px;
+  border: none;
+  margin-bottom: 25px;
+  color: white;
+}
+.submit{
+  background: rgb(45,126,231);
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  border: none;
+  margin: 10px 0px 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+a{
+  color: white;
+}
+.procreg{
+  margin: auto;
+  margin-top: 100px;
+  border: 1px solid black;
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.navbar{
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 4%;
+  padding-right: 4%;
+  font-weight: bold;
+  border-radius: 30px;
+  
+} 
+ul li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.navbar-items{
+  color: black;
+  text-decoration: none;
+  border: 1px;
+  border-style: solid;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+.navbar-items-cerrar{
+  color: black;
+  text-decoration: none;
+  border: 1px;
+  border-style: solid;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+img{
+  background-color: aliceblue;
+  width: 60px;
+  height: 50px;
+}
+.tabla-perfil{
+  margin: auto;
+  background-color: black;
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 5px rgba(226, 247, 135, 0.75);
+
+}
+.tabla{
+  margin: auto;
+  background-color: black;
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 5px rgba(226, 247, 135, 0.75);
+}
+.ltd{
+  padding: 50px 10px 10px 10px;
+  border: 1px solid black;
+  background-color: rgb(165, 154, 154);
+}
+.ltd-perfil{
+  padding: 0px 50px 0px 50px;
+  border: 1px solid black;
+  background-color: rgb(165, 154, 154);
+  border-style: solid;
+  font-weight: bold;
+}
+h3 h4{
+  margin: 10px;
+}
+.modificar{
+  margin-left: 25%;
+  color: black;
+  text-decoration: none;
+  border: 1px;
+  border-style: solid;
+  background-color: rgb(154, 215, 243);
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+.eliminar{
+  margin-right: 25%;
+  color: black;
+  text-decoration: none;
+  border: 1px;
+  border-style: solid;
+  background-color: rgb(243, 154, 154);
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+
+
