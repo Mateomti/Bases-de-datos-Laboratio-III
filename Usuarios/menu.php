@@ -44,19 +44,19 @@ else {
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/logo_utn.png" /></center
+            ><center><img src="img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/logo_utn.png" /></center
+            ><center><img src="img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/logo_utn.png" /></center
+            ><center><img src="img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
@@ -64,25 +64,25 @@ else {
       <tr>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/logo_utn.png" /></center
+            ><center><img src="img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/logo_utn.png" /></center
+            ><center><img src="img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/logo_utn.png" /></center
+            ><center><img src="img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/logo_utn.png" /></center
+            ><center><img src="img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
