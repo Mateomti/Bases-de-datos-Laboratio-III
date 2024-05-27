@@ -1,13 +1,5 @@
 <?php
-session_start(); // Inicia la sesión
-
-if (isset($_SESSION['user'])) {
-    $user = $_SESSION['user'];
-} else {
-    // Si no hay usuario en la sesión, redirigir al inicio de sesión
-    header("Location: ../index.html");
-    exit();
-}
+include('../Usuarios/validar_sesion.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -99,7 +91,7 @@ if (isset($_SESSION['user'])) {
             echo"
             <a
                 class='nav-link'
-                href='../index.html'
+                href='../Usuarios/cerrar_sesion.php'
                 role='button'
                 aria-expanded='false'
               >

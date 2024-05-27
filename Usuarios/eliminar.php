@@ -1,5 +1,7 @@
 <?php
 include('conexion.php');
+include('validar_sesion.php');
+
 $id = $_GET['id'];
 
 $ver = "DELETE from usuario where usuario.id_usuario = $id";

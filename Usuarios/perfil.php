@@ -1,17 +1,9 @@
 <?php
 include('conexion.php');
-session_start();
+include('validar_sesion.php');
 
-if (isset($_SESSION['user'])) {
-  $user = $_SESSION['user'];
-} 
-else {
-  echo"
-  <script>
-  alert('Debe iniciar sesion primero.');
-  header('Location: ../index.html');
-  </script>";
-}
+
+
   ?>
 
 
@@ -30,7 +22,7 @@ else {
           echo"<li><a class='navbar-items' href='menu.php'>Menu Principal</a></li>"; 
           ?>
           <li>
-            <a class="navbar-items-cerrar" href="../index.html">Cerrar sesion</a>
+            <a class="navbar-items-cerrar" href="cerrar_sesion.php">Cerrar sesion</a>
           </li>
         </ul>
       </nav>
@@ -47,7 +39,7 @@ else {
         <h3>Nombre del perfil:</h3>
       </td>
       <td class="ltd-perfil">
-        <h4><?php echo$vector[1]?></h4>
+        <h4><?php echo$user?></h4>
       </td>
     </tr>
     <tr class="ltd-perfil">
@@ -68,10 +60,10 @@ else {
     </tr>
     <tr class="ltd-perfil">
       <td class="ltd-perfil">
-        <h4><a class="modificar" <?php echo"href='modificar.php?user=$vector[1]'"?>>Modificar</a></h4>
+        <h4><a class="modificar" href='modificar.php'>Modificar</a></h4>
       </td>
       <td class="ltd-perfil">
-      <h4><a class="eliminar" <?php echo"href='eliminar.php?id=$vector[0]' onclick='return confirmar()'"?>>Eliminar</a></h4>
+      <h4><a class="eliminar" href='eliminar.php' onclick='return confirmar()'>Eliminar</a></h4>
 
       </td>
     </tr>

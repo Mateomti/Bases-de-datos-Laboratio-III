@@ -1,16 +1,6 @@
 <?php
-session_start();
+include('validar_sesion.php');
 
-if (isset($_SESSION['user'])) {
-  $user = $_SESSION['user'];
-} 
-else {
-  echo"
-  <script>
-  alert('Debe iniciar sesion primero.');
-  header('Location: ../index.html');
-  </script>";
-}
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +18,7 @@ else {
           echo"<li><a class='navbar-items' href='perfil.php'>Perfil</a></li>"; 
           ?>
           <li>
-            <a class='navbar-items' href="../index.html">Cerrar sesion</a>
+            <a class='navbar-items' href="cerrar_sesion.php">Cerrar sesion</a>
           </li>
         </ul>
       </nav>

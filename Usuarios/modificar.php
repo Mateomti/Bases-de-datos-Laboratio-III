@@ -1,6 +1,8 @@
 <?php
 include('conexion.php');
-  $user = $_GET['user'];
+include('validar_sesion.php');
+
+  $user = $_SESSION['user'];
   $sql = "SELECT * from usuario where usuario.user = '$user'";
   $res = mysqli_query($con, $sql);
   $vector = mysqli_fetch_array($res);
@@ -21,7 +23,7 @@ include('conexion.php');
           echo"<li><a class='navbar-items' href='menu.php?user=$user'>Menu Principal</a></li>"; 
           ?>
           <li>
-            <a class="navbar-items-cerrar" href="../index.html">Cerrar sesion</a>
+            <a class="navbar-items-cerrar" href="cerrar_sesion.php">Cerrar sesion</a>
           </li>
         </ul>
       </nav>
