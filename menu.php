@@ -1,5 +1,5 @@
 <?php
-include('validar_sesion.php');
+include('Usuarios/validar_sesion.php');
 
 ?>
 
@@ -7,15 +7,15 @@ include('validar_sesion.php');
 <html lang="es">
   <head>
     <title>Usuarios</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Usuarios/style.css" />
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <h1><img src="img/logo_utn.png" /></h1>
+        <h1><img src="Usuarios/img/logo_utn.png" /></h1>
         <ul>
           <?php
-          echo"<li><a class='navbar-items' href='perfil.php'>Perfil</a></li>"; 
+          echo"<li><a class='navbar-items' href='Usuarios/perfil.php'>Perfil</a></li>"; 
           ?>
           <li>
             <a class='navbar-items' href="cerrar_sesion.php">Cerrar sesion</a>
@@ -27,26 +27,26 @@ include('validar_sesion.php');
     <table class="tabla">
       <tr>
         <td class="ltd">
-          <a href="../Ejercicio1-Colegio/index.php" id="ej1">
-            <center><img src="img/colegio.png" /></center>
+          <a href="Ejercicio1-Colegio/index.php" id="ej1">
+            <center><img src="Usuarios/img/colegio.png" /></center>
           </a>
           <p><center>Ejercicio 1 <br> Colegio</center></p>
         </td>
         <td class="ltd">
-          <a href="../Ejercicio2-Concesionaria/index.php" id="ej2"
-            ><center><img src="img/concesionaria.png" /></center
+          <a href="Ejercicio2-Concesionaria/index.php" id="ej2"
+            ><center><img src="Usuarios/img/concesionaria.png" /></center
           ></a>
           <p><center>Ejercicio 2 <br> Concesionario</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/coming_soon.jpg" /></center
+            ><center><img src="Usuarios/img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/coming_soon.jpg" /></center
+            ><center><img src="Usuarios/img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
@@ -54,25 +54,25 @@ include('validar_sesion.php');
       <tr>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/coming_soon.jpg" /></center
+            ><center><img src="Usuarios/img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/coming_soon.jpg" /></center
+            ><center><img src="Usuarios/img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/coming_soon.jpg" /></center
+            ><center><img src="Usuarios/img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="img/coming_soon.jpg" /></center
+            ><center><img src="Usuarios/img/coming_soon.jpg" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>

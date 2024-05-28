@@ -14,7 +14,7 @@ $valor = mysqli_fetch_array($ver);
 if ($valor){
   echo"<script>
   alert('Inicio de sesion exitoso!');
-  window.location.href = 'menu.php';
+  window.location.href = '../menu.php';
   </script>";
 }
 else{

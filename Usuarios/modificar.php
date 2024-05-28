@@ -20,10 +20,10 @@ include('validar_sesion.php');
         <h1><img src="img/logo_utn.png" /></h1>
         <ul>
           <?php
-          echo"<li><a class='navbar-items' href='menu.php?user=$user'>Menu Principal</a></li>"; 
+          echo"<li><a class='navbar-items' href='../menu.php'>Menu Principal</a></li>"; 
           ?>
           <li>
-            <a class="navbar-items-cerrar" href="cerrar_sesion.php">Cerrar sesion</a>
+            <a class="navbar-items-cerrar" href="../cerrar_sesion.php">Cerrar sesion</a>
           </li>
         </ul>
       </nav>

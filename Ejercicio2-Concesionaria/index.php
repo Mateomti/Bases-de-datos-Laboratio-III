@@ -34,8 +34,8 @@ include('../Usuarios/validar_sesion.php');
         <li><a href="#">Listado</a></li>
       </ul>
     </li>
-    <li><a href="../Usuarios/menu.php">Menu Principal</a></li>
-    <li><a href="../Usuarios/cerrar_sesion.php">Cerrar sesion</a></li>
+    <li><a href="../menu.php">Menu Principal</a></li>
+    <li><a href="../cerrar_sesion.php">Cerrar sesion</a></li>
   </ul>
 </nav>
 

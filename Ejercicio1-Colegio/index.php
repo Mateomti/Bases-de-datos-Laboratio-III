@@ -82,7 +82,7 @@ include('../Usuarios/validar_sesion.php');
             echo"
             <a
                 class='nav-link'
-                href='../Usuarios/menu.php?user=$user'
+                href='../menu.php'
                 role='button'
                 aria-expanded='false'
               >
@@ -91,7 +91,7 @@ include('../Usuarios/validar_sesion.php');
             echo"
             <a
                 class='nav-link'
-                href='../Usuarios/cerrar_sesion.php'
+                href='../cerrar_sesion.php'
                 role='button'
                 aria-expanded='false'
               >
