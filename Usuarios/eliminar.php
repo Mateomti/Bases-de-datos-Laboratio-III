@@ -1,6 +1,6 @@
 <?php
 include('conexion.php');
-include('validar_sesion.php');
+include('../validar_sesion.php');
 
 
 $ver = "DELETE from usuario where usuario.user = '$user'";

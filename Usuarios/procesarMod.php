@@ -1,6 +1,6 @@
 <?php
 include('conexion.php');
-include('validar_sesion.php');
+include('../validar_sesion.php');
 
 $id = $_POST['id'];
 $user = $_POST['user'];

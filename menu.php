@@ -1,5 +1,5 @@
 <?php
-include('Usuarios/validar_sesion.php');
+include('validar_sesion.php');
 
 ?>
 
