@@ -1,7 +1,6 @@
 <?php
 
   include('conexion.php');
-  include('validar_sesion.php');
 
   $user = $_POST['user'];
   $pass = $_POST['pass'];

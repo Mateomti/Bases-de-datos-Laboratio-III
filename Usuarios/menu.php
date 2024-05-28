@@ -27,16 +27,16 @@ include('validar_sesion.php');
     <table class="tabla">
       <tr>
         <td class="ltd">
-          <a href="../Ejercicio1-Colegio/index.php">
-            <center><img src="img/logo_utn.png" /></center>
+          <a href="../Ejercicio1-Colegio/index.php" id="ej1">
+            <center><img src="img/colegio.png" /></center>
           </a>
-          <p><center>Ejercicio 1 | Colegio</center></p>
+          <p><center>Ejercicio 1 <br> Colegio</center></p>
         </td>
         <td class="ltd">
-          <a href="#"
-            ><center><img src="img/coming_soon.jpg" /></center
+          <a href="../Ejercicio2-Concesionaria/index.php" id="ej2"
+            ><center><img src="img/concesionaria.png" /></center
           ></a>
-          <p><center>Proximamente...</center></p>
+          <p><center>Ejercicio 2 <br> Concesionario</center></p>
         </td>
         <td class="ltd">
           <a href="#"
