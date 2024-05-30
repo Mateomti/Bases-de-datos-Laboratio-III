@@ -176,18 +176,40 @@ input[type="number"]{
   color: white;
   box-shadow: 0px 1px  3px 1px rgba(255, 255, 255, 0.7);
 }
+input[type="date"]{
+  padding: 10px;
+  text-align: center;
+  background-color: #645b5b;
+  color: white;
+  border-radius: 10px;
+  margin: 2px 0px 0px 90px;
+}
 input.submit{
   background: rgb(15, 117, 37, 0.9);
   height: 40px;
   line-height: 40px;
   border-radius: 40px;
   border: none;
-  margin: 40px 0px 10px;
+  margin: 15px 0px 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   color: white;
   font-size: 12px;
   text-transform: uppercase;
 }
+select{
+  background-color: #645b5b;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  padding: 0px 155px 1px 20px;
+  border: none;
+  color: white;
+  box-shadow: 0px 1px  3px 1px rgba(255, 255, 255, 0.7);
+}
+option{
+  font-size: 20px;
+}
+
 input.borrar{
   background: rgba(18, 79, 158, 0.7);
   height: 40px;

@@ -23,8 +23,8 @@ include('../validar_sesion.php');
     <li>
       <a href="#">Cliente</a>
       <ul class="navbar-vertical">
-        <li><a href="#">Registrar</a></li>
-        <li><a href="listado_cliente.php">Listado</a></li>
+        <li><a href="clientes/reg_cliente.php">Registrar</a></li>
+        <li><a href="clientes/listado_cliente.php">Listado</a></li>
       </ul>
     </li>
     <li>

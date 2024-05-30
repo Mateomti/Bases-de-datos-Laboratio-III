@@ -23,15 +23,15 @@ include('../../validar_sesion.php');
       <li>
         <a href="#">Cliente</a>
           <ul class="navbar-vertical">
-            <li><a href="#">Registrar</a></li>
-            <li><a href="../listado_cliente.php">Listado</a></li>
+            <li><a href="../clientes/reg_cliente.php">Registrar</a></li>
+            <li><a href="../clientes/listado_cliente.php">Listado</a></li>
           </ul>
       </li>
       <li>
         <a href="#">Revision</a>
         <ul class="navbar-vertical">
-          <li><a href="#">Registrar</a></li>
-          <li><a href="../listado_revision.php">Listado</a></li>
+          <li><a href="../revision/reg_revision.php">Registrar</a></li>
+          <li><a href="../revision/listado_revision.php">Listado</a></li>
         </ul>
       </li>
       <li><a href="../../menu.php">Menu Principal</a></li>
@@ -42,7 +42,6 @@ include('../../validar_sesion.php');
   include('../conexion.php');
   $sql = "SELECT * FROM `auto` where 1";
   $res = mysqli_query($con, $sql);
-  $vector = mysqli_fetch_array($res);
   if ($res == false){
     echo"
   <script>
@@ -61,12 +60,12 @@ include('../../validar_sesion.php');
       <td class="titulo">Precio Venta</td>
       <td class="otros">Modificar</td>
       <td class="otros">Eliminar</td>
-    </tr>|
+    </tr>
     <?php
     while ($vector = mysqli_fetch_array($res)){
     echo"<tr>"; 
     echo"<td>$vector[1]</td>
-      <td>$vector[2]</td>
+        <td>$vector[2]</td>
       <td>$vector[3]</td>
       <td>$vector[4]</td>
       <td><a href='modificar_auto.php?cod=$vector[0]'>Modificar</a> </td>

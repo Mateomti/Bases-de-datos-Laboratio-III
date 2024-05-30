@@ -1,5 +1,8 @@
 <?php
 include('../../validar_sesion.php');
+include('../conexion.php');
+$sql = "SELECT cliente.cod_cliente, cliente.nomyape from cliente where 1";
+$res = mysqli_query($con, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -39,7 +42,7 @@ include('../../validar_sesion.php');
       <li><a href="../../cerrar_sesion.php">Cerrar sesion</a></li>
     </ul>
   </nav>
-  <div class="login">
+  <div class="mod">
       <form
         class="formulario"
         action="procesar_auto.php"
@@ -61,6 +64,16 @@ include('../../validar_sesion.php');
         <fieldset>
           <legend>Ingrese precio de venta</legend>
           <input type="number" id="precio" name="precio" required/>
+        </fieldset> 
+        <fieldset>
+          <legend>Ingrese al cliente</legend>
+          <select  name="cliente" id="cliente">
+            <?php
+            while ($vec = mysqli_fetch_array($res)){
+              echo"<option value='$vec[0]'>$vec[1]</option>";
+            }
+            ?>
+          </select>
         </fieldset>  
         <input class="submit" type="submit" value="Registrar" />
         <input class="borrar" type="submit" value="Borrar" />

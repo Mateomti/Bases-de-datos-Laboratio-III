@@ -20,7 +20,7 @@
 
     auto: cod_auto, marca, modelo, color, pventa, cod_cliente.
 
-    cliente: cod_cliente, nomyape, direccion, ciudad, telefono, falta.
+    cliente: cod_cliente, nomyape, direccion, ciudad, telefono, dalta.
 
     revision: cod_revision, fingreso, fegreso, estado, cambio_filtro, cambio_aceite, cambio_freno, descripccion, cod_auto.
 

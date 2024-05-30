@@ -6,8 +6,10 @@ $marca = $_POST['marca'];
 $modelo = $_POST['modelo'];
 $color = $_POST['color'];
 $precio = $_POST['precio'];
+$cliente = $_POST['cliente'];
 
-$sql = "INSERT into `auto` (marca, modelo, color, pventa) values ('$marca','$modelo','$color',$precio)";
+
+$sql = "INSERT into `auto` (marca, modelo, color, pventa, cod_cliente) values ('$marca','$modelo','$color',$precio, $cliente)";
 $res = mysqli_query($con, $sql);
 
 if ($res==true){
