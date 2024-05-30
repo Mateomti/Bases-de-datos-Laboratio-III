@@ -43,8 +43,16 @@ include('../../validar_sesion.php');
   $sql = "SELECT * FROM `auto` where 1";
   $res = mysqli_query($con, $sql);
   $vector = mysqli_fetch_array($res);
-
-  ?>
+  if ($res == false){
+    echo"
+  <script>
+    alert('Actualmente no hay autos cargados, Registre uno.');
+    window.location.href = 'reg_auto.php';
+  </script>
+  ";
+  }
+  else{
+    ?>
   <table class="tabla-auto">
     <tr >
       <td class="titulo">Marca</td>
@@ -54,32 +62,18 @@ include('../../validar_sesion.php');
       <td class="otros">Modificar</td>
       <td class="otros">Eliminar</td>
     </tr>|
-    <tr>
-<?php echo"<td>$vector[1]</td>
+    <?php
+    while ($vector = mysqli_fetch_array($res)){
+    echo"<tr>"; 
+    echo"<td>$vector[1]</td>
       <td>$vector[2]</td>
       <td>$vector[3]</td>
       <td>$vector[4]</td>
       <td><a href='modificar_auto.php?cod=$vector[0]'>Modificar</a> </td>
-      <td><center><a href='eliminar_auto.php?cod=$vector[0]' onclick='return confirmar()'> Eliminar</a></center></center></td>";?>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
+      <td><center><a href='eliminar_auto.php?cod=$vector[0]' onclick='return confirmar()'> Eliminar</a></center></center></td>";
+    echo"</tr>";
+    }echo"</table>";
+  }?>
   <script>
     function confirmar(){
       return confirm('¿Esta seguro que desea eliminar este auto?');
