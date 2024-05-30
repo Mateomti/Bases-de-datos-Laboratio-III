@@ -1,0 +1,26 @@
+
+***** BASES DE DATOS *****
+
+
+- usuarios:
+
+    usuario: id_usuario, user, password, fnacimiento, nomyape.
+
+
+- colegio:
+
+    alumno: id_alumno, dni, fnacimiento, apeynom, ciudad, domicilio, mail, genero, telefono.
+
+    materia: id_materia, nombre, cantidad_hs, correlativas, curso.
+
+    cursada: id_cursada, id_alumno, id_materia, nota1, nota2, asistencia, estado.
+
+
+- concesionaria:
+
+    auto: cod_auto, marca, modelo, color, pventa, cod_cliente.
+
+    cliente: cod_cliente, nomyape, direccion, ciudad, telefono, falta.
+
+    revision: cod_revision, fingreso, fegreso, estado, cambio_filtro, cambio_aceite, cambio_freno, descripccion, cod_auto.
+

@@ -7,20 +7,32 @@
 body{
   background-image: url(img/20161117105850ab2afdd0578175ef426831abce040399.jpg);
   background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-position:50% 65%;
-  background-size: 3000px auto;
-  background-attachment: fixed;
+  background-position:50% 65%; /*Determino la posicion de la imagen*/
+  background-size: 3000px auto;/*Tamaño de la imagen*/
+  background-attachment: fixed;/*Hace que se quede fija la imagen*/
+  position: relative; /* Necesario para el pseudo-elemento */
+  height: 94.8vh; /* determino cuanto espacio voy a usar de la pantalla */
+  margin: 0; /* Elimina el margen por defecto */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 972px;
+  background-color: rgba(0, 0, 0, 0.4); /* Capa oscura: Mayor el numero, mas oscuro */
+  z-index: -1; /* Coloca la capa detrás de cualquier contenido */
 }
 nav{
   max-width: 900px;
   margin: auto;
+  margin-top: 40px;
   background-color: #333;
   font-size: 20px;
-  margin-top: 50px;
   border: 2px solid black;
   box-shadow: 0px 0px 4px 0px red;
-
-
 }
 .navbar-horizontal{
   list-style: none;
@@ -34,25 +46,28 @@ nav{
   text-decoration: none;
 }
 .navbar-horizontal > li:hover{
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.50);
 }
 .navbar-vertical{
   position: absolute;
   display: none;
   list-style: none;
   width: 200px;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .75);
+  border: 1px solid rgba(255, 0, 0, 0.65);
 }
 .navbar-horizontal li:hover  .navbar-vertical  {
   display: block
 }
 .navbar-vertical li:hover{
   background-color: black;
+
 }
 .navbar-vertical li a{
   display: block;
   color: white;
   padding: 15px 15px 15px 20px;
+  text-decoration: none;
 }
 .tabla-auto{
   border: 1px solid red;
@@ -61,16 +76,130 @@ nav{
   margin-top: 100px;
   box-shadow: 0px 0px 20px 0px red;
 }
-
 .titulo{
-  padding: 20px 50px;
+  padding: 20px 30px;
+  background-color: #443f3f;
+  color: white;
+  letter-spacing: 1px;
+}
+.otros{
+  margin-right: 5px;
   background-color: #443f3f;
   color: white;
   letter-spacing: 1px;
 }
 tr td {
-  padding: 20px 50px;
+  padding: 20px 10px;
   background-color: #645b5b;
   color: white;
   letter-spacing: 1px;
+  text-align: center;
+}
+.login{
+  margin: auto;
+  margin-top: 100px;
+  border: 1px solid red;
+  width: 400px;
+  height: 600px;
+  color: red;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.mod{
+  margin: auto;
+  margin-top: 100px;
+  border: 1px solid red;
+  width: 400px;
+  height: 700px;
+  color: red;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+form{
+  display: block;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 100%;
+  height: 120%;
+  backdrop-filter: brightness(20%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+h1{
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 24px;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  background-color: #333;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+fieldset{
+  border: 1px solid red ;
+  border: none;
+  margin-top: 5px;
+}
+legend{
+  background-color: rgb(102, 15, 15);
+  border-radius: 20px;
+  font-size: smaller;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  text-align: left;
+  border: 1px solid black;
+  margin-bottom: 1px;
+}
+input[type="text"]{
+  background-color: #645b5b;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  padding: 0px 130px 0px 20px;
+  border: none;
+  color: white;
+  box-shadow: 0px 1px  3px 1px rgba(255, 255, 255, 0.7);
+}
+input[type="number"]{
+  background-color: #645b5b;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  width: 315px;
+  padding: 0px 13px 0px 20px;
+  border: none;
+  color: white;
+  box-shadow: 0px 1px  3px 1px rgba(255, 255, 255, 0.7);
+}
+input.submit{
+  background: rgb(15, 117, 37, 0.9);
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  border: none;
+  margin: 40px 0px 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+input.borrar{
+  background: rgba(18, 79, 158, 0.7);
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  border: none;
+  margin: 10px 0px 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+a{
+  color: white;
 }

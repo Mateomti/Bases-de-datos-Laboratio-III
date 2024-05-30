@@ -16,15 +16,15 @@ include('../validar_sesion.php');
     <li>
       <a href="#">Autos</a>
       <ul class="navbar-vertical">
-        <li><a href="#">Registrar</a></li>
-        <li><a href="listado_auto.php">Listado</a></li>
+        <li><a href="autos/reg_auto.php">Registrar</a></li>
+        <li><a href="autos/listado_auto.php">Listado</a></li>
       </ul>
     </li>
     <li>
       <a href="#">Cliente</a>
       <ul class="navbar-vertical">
         <li><a href="#">Registrar</a></li>
-        <li><a href="#">Listado</a></li>
+        <li><a href="listado_cliente.php">Listado</a></li>
       </ul>
     </li>
     <li>
