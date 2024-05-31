@@ -30,8 +30,8 @@ include('../validar_sesion.php');
     <li>
       <a href="#">Revision</a>
       <ul class="navbar-vertical">
-        <li><a href="#">Registrar</a></li>
-        <li><a href="#">Listado</a></li>
+        <li><a href="revision/reg_revision.php">Registrar</a></li>
+        <li><a href="revision/listado_revision.php">Listado</a></li>
       </ul>
     </li>
     <li><a href="../menu.php">Menu Principal</a></li>

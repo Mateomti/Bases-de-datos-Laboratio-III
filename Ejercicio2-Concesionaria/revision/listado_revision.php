@@ -1,11 +1,11 @@
 <?php
-include('../validar_sesion.php');
+include('../../validar_sesion.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <title>Ejercicio 2</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <nav>
@@ -16,26 +16,26 @@ include('../validar_sesion.php');
       <li>
         <a href="#">Autos</a>
           <ul class="navbar-vertical">
-            <li><a href="autos/reg_auto.php">Registrar</a></li>
-            <li><a href="autos/listado_auto.php">Listado</a></li>
+            <li><a href="../autos/reg_auto.php">Registrar</a></li>
+            <li><a href="../autos/listado_auto.php">Listado</a></li>
           </ul>
       </li>
       <li>
         <a href="#">Cliente</a>
           <ul class="navbar-vertical">
-            <li><a href="clientes/reg_cliente.php">Registrar</a></li>
-            <li><a href="clientes/listado_cliente.php">Listado</a></li>
+            <li><a href="../clientes/reg_cliente.php">Registrar</a></li>
+            <li><a href="../clientes/listado_cliente.php">Listado</a></li>
           </ul>
       </li>
       <li>
         <a href="#">Revision</a>
         <ul class="navbar-vertical">
-          <li><a href="#">Registrar</a></li>
+          <li><a href="reg_revision.php">Registrar</a></li>
           <li><a href="listado_revision.php">Listado</a></li>
         </ul>
       </li>
-      <li><a href="../menu.php">Menu Principal</a></li>
-      <li><a href="../cerrar_sesion.php">Cerrar sesion</a></li>
+      <li><a href="../../menu.php">Menu Principal</a></li>
+      <li><a href="../../cerrar_sesion.php">Cerrar sesion</a></li>
     </ul>
   </nav>
   <table class="tabla-auto">
@@ -43,9 +43,9 @@ include('../validar_sesion.php');
       <td class="titulo">Ingreso</td>
       <td class="titulo">Egreso</td>
       <td class="titulo">Estado</td>
-      <td class="otros">Cambio Filtro</td>
-      <td class="otros">Cambio Aceite</td>
-      <td class="otros">Cambio Freno</td>
+      <td class="titulo">Filtro</td>
+      <td class="titulo">Aceite</td>
+      <td class="titulo">Freno</td>
       <td class="otros">Descripcion</td>
       <td class="titulo">Cliente</td>
       <td class="otros">Modificar</td>
