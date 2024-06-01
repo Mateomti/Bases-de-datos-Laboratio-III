@@ -12,8 +12,8 @@ $res = mysqli_query($con, $sql);
   
   <link rel="stylesheet" href="../style.css">
   <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" src="../js/funciones.js"></script>
-    <script src="../js/funciones.js"></script>
+  <script type="text/javascript" src="../js/funciones.js"></script>
+  <script src="../js/funciones.js"></script>
   
 </head>
 <body>
@@ -44,6 +44,15 @@ $res = mysqli_query($con, $sql);
           <li><a href="listado_revision.php">Listado</a></li>
         </ul>
       </li>
+      <li>
+        <a href="#">Actividades</a>
+        <ul class="navbar-vertical-act">
+          <li><a href="../actividades/punto1.php">Búsqueda y listado de revisiones </a></li>
+          <li><a href="../actividades/punto2.php">Revisiones por cliente </a></li>
+          <li><a href="../actividades/punto3.php">Revisiones por auto </a></li>
+          <li><a href="../actividades/punto4.php">Revisiones no finalizadas </a></li>
+        </ul>
+      </li>
       <li><a href="../../menu.php">Menu Principal</a></li>
       <li><a href="../../cerrar_sesion.php">Cerrar sesion</a></li>
     </ul>
@@ -62,13 +71,20 @@ $res = mysqli_query($con, $sql);
           <input type="date" id="egreso" name="egreso" required/>
         </fieldset>  
         <fieldset class="auto">
-          <legend>Ingrese el auto </legend>
-          <select class="select-auto" name="auto" id="auto">
-            <?php
-            while ($vec = mysqli_fetch_array($res)){
-              echo"<option value='$vec[0]'>$vec[1] - $vec[2]</option>";
-            }
-            ?>
+          
+          <?php
+          if ($res && mysqli_num_rows($res) > 0) {
+
+              echo "
+              <legend>Ingrese el auto </legend>
+              <select class='select-auto' name='auto' id='auto'>";
+              while ($vector = mysqli_fetch_array($res)) {
+                  echo "<option value='$vector[0]'>$vector[1] - $vector[2]</option>";
+              }
+          } else {
+              echo "<p>No se han registrado autos.<br>Registre un <a href='../autos/reg_auto.php'>auto aquí</a>!</p>";
+          }
+          ?>
           </select>
         </fieldset> 
         <fieldset >
@@ -104,9 +120,15 @@ $res = mysqli_query($con, $sql);
           <legend>Descripcion</legend>
           <textarea name="descripcion" id="descripcion"></textarea>
         </fieldset> 
-         
-        <input class="s-reg" type="submit" value="Registrar" />
-        <input class="b-reg" type="reset" value="Borrar" />
+        <?php
+          if ($res && mysqli_num_rows($res) > 0) {
+            echo'<input class="s-reg" type="submit" value="Registrar" />
+            <input class="b-reg" type="reset" value="Borrar" />';
+            
+          } 
+        ?>
+        
+        
       </form>
     </div>
     
