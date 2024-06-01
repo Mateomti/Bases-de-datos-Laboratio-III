@@ -122,7 +122,7 @@ tr td {
   margin-top: 100px;
   border: 1px solid red;
   width: 800px;
-  height: 500px;
+  height: 650px;
   color: red;
   background-size: cover;
   background-position: center;
@@ -179,9 +179,19 @@ legend{
   box-shadow: 0px 1px  3px 1px rgba(255, 255, 255, 0.7);
 }
 .auto{
-  margin-left: 103px;
+  margin-left: 50px;
 }
 .select-auto{
+  background-color: #645b5b;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  padding: 0px 155px 1px 20px;
+  border: none;
+  color: white;
+  box-shadow: 0px 1px  3px 1px rgba(255, 255, 255, 0.7);
+}
+.select-cliente{
   background-color: #645b5b;
   height: 40px;
   line-height: 40px;

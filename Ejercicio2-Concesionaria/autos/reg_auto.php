@@ -72,7 +72,7 @@ $res = mysqli_query($con, $sql);
                 echo"
                 <fieldset>
                   <legend>Ingrese al cliente</legend>
-                  <select  name='cliente' id='cliente'>
+                  <select class='select-cliente' name='cliente' id='cliente'>
                     <option value='$vector[0]'>$vector[1]</option>
                   </select>
                 </fieldset>

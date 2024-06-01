@@ -38,8 +38,22 @@ include('../../validar_sesion.php');
       <li><a href="../../cerrar_sesion.php">Cerrar sesion</a></li>
     </ul>
   </nav>
+  <?php
+  include('../conexion.php');
+  $sql = "SELECT R.*, C.cod_auto, C.marca, C.modelo from revision R, auto C where R.cod_auto = C.cod_auto";
+  $res = mysqli_query($con, $sql);
+  
+  if ($res == false){
+    echo"
+    <script>
+    alert('Actualmente no hay revisiones registradas, registre una.');
+    window.location.href = 'reg_revision.php';
+    </script>";
+  }
+  else{
+    ?>
   <table class="tabla-auto">
-    <tr >
+    <tr>
       <td class="titulo">Ingreso</td>
       <td class="titulo">Egreso</td>
       <td class="titulo">Estado</td>
@@ -50,45 +64,25 @@ include('../../validar_sesion.php');
       <td class="titulo">Cliente</td>
       <td class="otros">Modificar</td>
       <td class="otros">Eliminar</td>
-
     </tr>
-    <tr>
-      <td>2002-04-28</td>
-      <td>2002-04-31</td>
-      <td>Finalizado</td>
-      <td>Ok</td>
-      <td>Ok</td>
-      <td>Ok</td>
-      <td>Terminado</td>
-      <td>Mateo Insaurralde</td>
-      <td>Modificar</td>
-      <td>Eliminar</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
+    <?php
+    while($vec = mysqli_fetch_array($res)){
+      echo"
+      <tr>
+      <td>$vec[1]</td>
+      <td>$vec[2]</td>
+      <td>$vec[3]</td>
+      <td>$vec[4]</td>
+      <td>$vec[5]</td>
+      <td>$vec[6]</td>
+      <td>$vec[7]</td>
+      <td>$vec[10]-$vec[11]</td>
+      <td><a href='modificar_revision.php?cod=$vec[0]'>Modificar</a></td>
+      <td><a href='eliminar_revision.php?cod=$vec[0]'>Eliminar</a></td>
+    </tr>";
+    }echo"</table>";}
+    ?>
+  
   
 </body>
 </html>

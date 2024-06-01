@@ -40,7 +40,7 @@ include('../../validar_sesion.php');
   </nav>
   <?php
   include('../conexion.php');
-  $sql = "SELECT * FROM `auto` where 1";
+  $sql = "SELECT C.nomyape, C.cod_cliente, A.* FROM auto A, cliente C where C.cod_cliente = A.cod_cliente";
   $res = mysqli_query($con, $sql);
   if ($res == false){
     echo"
@@ -51,6 +51,7 @@ include('../../validar_sesion.php');
   ";
   }
   else{
+    
     ?>
   <table class="tabla-auto">
     <tr >
@@ -58,16 +59,18 @@ include('../../validar_sesion.php');
       <td class="titulo">Modelo</td>
       <td class="titulo">Color</td>
       <td class="titulo">Precio Venta</td>
+      <td class="titulo">Cliente</td>
       <td class="otros">Modificar</td>
       <td class="otros">Eliminar</td>
     </tr>
     <?php
     while ($vector = mysqli_fetch_array($res)){
     echo"<tr>"; 
-    echo"<td>$vector[1]</td>
-        <td>$vector[2]</td>
-      <td>$vector[3]</td>
-      <td>$vector[4]</td>
+    echo"<td>$vector[3]</td>
+        <td>$vector[4]</td>
+      <td>$vector[5]</td>
+      <td>$vector[6]</td>
+      <td>$vector[0]</td>
       <td><a href='modificar_auto.php?cod=$vector[0]'>Modificar</a> </td>
       <td><center><a href='eliminar_auto.php?cod=$vector[0]' onclick='return confirmar()'> Eliminar</a></center></center></td>";
     echo"</tr>";

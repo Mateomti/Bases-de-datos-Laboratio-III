@@ -1,9 +1,13 @@
 <?php
-include('../../validar_sesion.php');
 include('../conexion.php');
+include('../../validar_sesion.php');
 
-$sql = "SELECT A.cod_auto, A.marca, A.modelo from auto A where 1";
+$cod = $_GET['cod'];
+
+$sql = "SELECT R.*, A.marca, A.modelo, A.cod_auto from revision R, auto A 
+where cod_revision = $cod and R.cod_auto = A.cod_auto";
 $res = mysqli_query($con, $sql);
+$vector = mysqli_fetch_array($res);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -51,14 +55,14 @@ $res = mysqli_query($con, $sql);
   <div class="reg_revision">
       <form
         class="formulario"
-        action="procesar_revision.php"
+        action="procesar_mod_revision.php"
         method="post"
         onsubmit="return validarFechas(event);"
       >
-        <h1>Registro de revisiones</h1>
+        <h1>Modificar revision</h1>
         <fieldset>
           <legend class="otro-legend">Fecha de ingreso -------- Fecha de egreso</legend>
-          <input type="date" id="ingreso" name="ingreso" required/>
+          <input type="date" id="ingreso" name="ingreso" value="$vector[1]" required/>
           <input type="date" id="egreso" name="egreso" required/>
         </fieldset>  
         <fieldset class="auto">
@@ -66,7 +70,7 @@ $res = mysqli_query($con, $sql);
           <select class="select-auto" name="auto" id="auto">
             <?php
             while ($vec = mysqli_fetch_array($res)){
-              echo"<option value='$vec[0]'>$vec[1] - $vec[2]</option>";
+              echo"<option value='$vec[11]'>$vec[9] - $vec[10]</option>";
             }
             ?>
           </select>
@@ -74,9 +78,9 @@ $res = mysqli_query($con, $sql);
         <fieldset >
           <legend>Ingrese el estado</legend>
           <select class="estado" name="estado" id="estado">
-            <option value="En espera">En espera</option>
-            <option value="En revision">En revision</option>
-            <option value="Finalizado">Finalizado</option>
+            <option value="esp">En espera</option>
+            <option value="rev">En revision</option>
+            <option value="fin">Finalizado</option>
           </select>
         </fieldset>  
         <fieldset>
