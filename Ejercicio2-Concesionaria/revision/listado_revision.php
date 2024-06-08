@@ -6,6 +6,9 @@ include('../../validar_sesion.php');
 <head>
   <title>Ejercicio 2</title>
   <link rel="stylesheet" href="../style.css">
+  <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="../js/funciones.js"></script>
+  <script src="../js/funciones.js"></script>
 </head>
 <body>
   <nav>
@@ -32,6 +35,15 @@ include('../../validar_sesion.php');
         <ul class="navbar-vertical">
           <li><a href="reg_revision.php">Registrar</a></li>
           <li><a href="listado_revision.php">Listado</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Actividades</a>
+        <ul class="navbar-vertical-act">
+          <li><a href="../actividades/punto1.php">Búsqueda y listado de revisiones </a></li>
+          <li><a href="../actividades/punto2.php">Revisiones por cliente </a></li>
+          <li><a href="../actividades/punto3.php">Revisiones por auto </a></li>
+          <li><a href="../actividades/punto4.php">Revisiones no finalizadas </a></li>
         </ul>
       </li>
       <li><a href="../../menu.php">Menu Principal</a></li>
@@ -61,25 +73,25 @@ include('../../validar_sesion.php');
       <td class="titulo">Aceite</td>
       <td class="titulo">Freno</td>
       <td class="otros">Descripcion</td>
-      <td class="titulo">Cliente</td>
+      <td class="titulo">Auto</td>
       <td class="otros">Modificar</td>
       <td class="otros">Eliminar</td>
     </tr>
     <?php
     while($vec = mysqli_fetch_array($res)){
-      echo"
+      echo "
       <tr>
-      <td>$vec[1]</td>
-      <td>$vec[2]</td>
-      <td>$vec[3]</td>
-      <td>$vec[4]</td>
-      <td>$vec[5]</td>
-      <td>$vec[6]</td>
-      <td>$vec[7]</td>
-      <td>$vec[10]-$vec[11]</td>
-      <td><a href='modificar_revision.php?cod=$vec[0]'>Modificar</a></td>
-      <td><a href='eliminar_revision.php?cod=$vec[0]'>Eliminar</a></td>
-    </tr>";
+        <td>{$vec[1]}</td>
+        <td>{$vec[2]}</td>
+        <td>{$vec[3]}</td>
+        <td>{$vec[4]}</td>
+        <td>{$vec[5]}</td>
+        <td>{$vec[6]}</td>
+        <td>{$vec[7]}</td>
+        <td>{$vec[10]}-{$vec[11]}</td>
+        <td><a href='modificar_revision.php?cod={$vec[0]}'>Modificar</a></td>
+        <td><a href='eliminar_revision.php?cod={$vec[0]}' onclick='return confirmar()'>Eliminar</a></td>
+      </tr>";
     }echo"</table>";}
     ?>
   

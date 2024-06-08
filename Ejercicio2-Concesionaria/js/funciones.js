@@ -17,9 +17,18 @@ function validarFechas(event) {
   return true;
   
 }
-
-$(document).ready(function(){
-
+function confirmar(){
+      return confirm('¿Esta seguro que desea eliminar este auto?');
+    }
+function Punto1(event){
+  let ingreso = document.getElementById('ingreso').value;
+  let egreso = document.getElementById('ingreso').value;
+  var dateIngreso = new Date(ingreso);
+  var dateEgreso = new Date(egreso);
+  if (dateIngreso > dateEgreso) {
+    alert("Error: La fecha de ingreso no puede ser mayor que la fecha de egreso.");
+    event.preventDefault(); // Prevenir el envío del formulario
+  }
   
+}
 
-});
