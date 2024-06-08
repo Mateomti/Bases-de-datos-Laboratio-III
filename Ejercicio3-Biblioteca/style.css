@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+body{
+    background-color: lightgrey;
+    display: flex;
+}
+.conteiner{
+    background-color: peru;
+    border: 1px solid black;
+    width: 250px;
+    height: 590px;
+    font-size: 20px;
+    padding-top: 90px;
+}
+.nav-bar{
+    background-color: peru;
+    list-style: none;
+}
+.items{
+  position: absolute;
+  display: none;
+  list-style: none;
+  margin-left: 140px;
+  margin-top: -33px;
+  width: 200px;
+  height: 100px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid black;
+}
+.nav-bar li:hover .items{
+    display: block;
+    width: 200px;
+    height: 100px;
+    text-decoration: none;
+}
+li{
+    margin: 10px 0px 10px 20px;
+    text-decoration: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+    margin: 10px 0px 10px 20px;
+}
+.footer{
+    background-color: peru;
+    margin-top: 280px;
+}
+.formulario{
+    margin: 150px 0px 0px 300px;
+}
+.tabla{
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+}
+.tabla tr {
+    border-bottom: 1px solid black;
+}
+.tabla th, td {
+    color: black;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
