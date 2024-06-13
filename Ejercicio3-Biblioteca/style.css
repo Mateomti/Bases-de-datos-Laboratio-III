@@ -11,7 +11,7 @@ body{
     background-color: peru;
     border: 1px solid black;
     width: 250px;
-    height: 590px;
+    height: 870px;
     font-size: 20px;
     padding-top: 90px;
 }
@@ -20,16 +20,16 @@ body{
     list-style: none;
 }
 .items{
-  position: absolute;
-  display: none;
-  list-style: none;
-  margin-left: 140px;
-  margin-top: -33px;
-  width: 200px;
-  height: 100px;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid black;
+    position: absolute;
+    display: none;
+    list-style: none;
+    margin-left: 140px;
+    margin-top: -33px;
+    width: 200px;
+    height: 100px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid black;
 }
 .nav-bar li:hover .items{
     display: block;
@@ -48,7 +48,7 @@ a{
 }
 .footer{
     background-color: peru;
-    margin-top: 280px;
+    margin-top: 550px;
 }
 .formulario{
     margin: 150px 0px 0px 300px;
