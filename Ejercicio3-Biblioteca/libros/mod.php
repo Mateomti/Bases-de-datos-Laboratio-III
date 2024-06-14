@@ -39,6 +39,13 @@ $vec = mysqli_fetch_array($res);
                 </ul>
             </li>
             <li>
+              <a href="#">Detalle Prestamos</a>
+              <ul class="items">
+                  <li><a href="../detalle/reg_detalle.php">Registrar</a></li>
+                  <li><a href="../detalle/listado_detalle.php">Listado</a></li>
+              </ul>
+          </li>
+            <li>
                 <a href="#">Reparacion</a>
                 <ul class="items">
                     <li><a href="../reparacion/reg_reparacion.php">Registrar</a></li>
@@ -81,20 +88,20 @@ $vec = mysqli_fetch_array($res);
           <td><label for="estado">estado</label></td>
           <td><select name="estado" id="estado">
             <?php
-            if ($vec[6] == 'biblioteca'){
-              echo"<option selected value='biblioteca'>biblioteca</option>
-              <option value='prestado'>prestado</option>
-              <option value='reparacion'>reparacion</option>";
+            if ($vec[6] == 'En Biblioteca'){
+              echo"<option selected value='En Biblioteca'>En Biblioteca</option>
+              <option value='Prestado'>Prestado</option>
+              <option value='En Reparacion'>En Reparacion</option>";
             }
-            if ($vec[6] == 'prestado'){
-              echo"<option  value='biblioteca'>biblioteca</option>
-              <option selected value='prestado'>prestado</option>
-              <option value='reparacion'>reparacion</option>";
+            if ($vec[6] == 'Prestado'){
+              echo"<option  value='En Biblioteca'>En Biblioteca</option>
+              <option selected value='Prestado'>Prestado</option>
+              <option value='En Reparacion'>En Reparacion</option>";
             }
-            if ($vec[6] == 'reparacion'){
-              echo"<option  value='biblioteca'>biblioteca</option>
-              <option value='prestado'>prestado</option>
-              <option selected ='reparacion'>reparacion</option>";
+            if ($vec[6] == 'En Reparacion'){
+              echo"<option  value='En Biblioteca'>En Biblioteca</option>
+              <option value='Prestado'>Prestado</option>
+              <option selected ='En Reparacion'>En Reparacion</option>";
             }
             ?>
           </select></td>

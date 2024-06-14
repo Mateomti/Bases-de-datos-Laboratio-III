@@ -15,13 +15,13 @@ if($res == true) {
   echo "
   <script> 
     alert('Registro exitoso!');
-    window.location.href = '../index.php';
+    window.location.href = 'listado_prestamo.php';
   </script>";
 } else {
   echo "
   <script> 
     alert('Ocurrio un error!');
-    window.location.href = '';
+    window.location.href = 'listado_prestamo.php';
   </script>";
 }
 ?>

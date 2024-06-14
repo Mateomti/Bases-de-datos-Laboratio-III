@@ -51,7 +51,7 @@ a{
     margin-top: 350px;
 }
 .formulario{
-    margin: 150px 0px 0px 300px;
+    margin: 200px auto auto auto;
 }
 .tabla{
     background-color: white;
@@ -66,4 +66,9 @@ a{
     padding: 10px;
     border-bottom: 1px solid black;
     text-align: center;
+}
+button{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
 }

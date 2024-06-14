@@ -38,6 +38,13 @@ include('../../validar_sesion.php');
                 </ul>
             </li>
             <li>
+              <a href="#">Detalle Prestamos</a>
+              <ul class="items">
+                  <li><a href="../detalle/reg_detalle.php">Registrar</a></li>
+                  <li><a href="../detalle/listado_detalle.php">Listado</a></li>
+              </ul>
+          </li>
+            <li>
                 <a href="#">Reparacion</a>
                 <ul class="items">
                     <li><a href="../reparacion/reg_reparacion.php">Registrar</a></li>

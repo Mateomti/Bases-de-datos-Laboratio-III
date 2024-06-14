@@ -41,6 +41,13 @@ $vec = mysqli_fetch_array($res);
                 </ul>
             </li>
             <li>
+              <a href="#">Detalle Prestamos</a>
+              <ul class="items">
+                  <li><a href="reg_detalle.php">Registrar</a></li>
+                  <li><a href="listado_detalle.php">Listado</a></li>
+              </ul>
+          </li>
+            <li>
                 <a href="#">Reparacion</a>
                 <ul class="items">
                     <li><a href="../reparacion/reg_reparacion.php">Registrar</a></li>

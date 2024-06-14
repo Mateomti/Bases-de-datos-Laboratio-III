@@ -13,22 +13,22 @@
           <li>
               <a href="#">Libros</a>
               <ul class="items">
-                  <li><a href="libros/reg_libro.php">Registrar</a></li>
-                  <li><a href="libros/listado_libro.php">Listado</a></li>
+                  <li><a href="../libros/reg_libro.php">Registrar</a></li>
+                  <li><a href="../libros/listado_libro.php">Listado</a></li>
               </ul>
           </li>
           <li>
               <a href="#">Socios</a>
               <ul class="items">
-                  <li><a href="socio/reg_socio.php">Registrar</a></li>
-                  <li><a href="socio/listado_socio.php">Listado</a></li>
+                  <li><a href="../socio/reg_socio.php">Registrar</a></li>
+                  <li><a href="../socio/listado_socio.php">Listado</a></li>
               </ul>
           </li>
           <li>
               <a href="#">Prestamos</a>
               <ul class="items">
-                  <li><a href="prestamo/reg_prestamo.php">Registrar</a></li>
-                  <li><a href="prestamo/listado_prestamo.php">Listado</a></li>
+                  <li><a href="../prestamo/reg_prestamo.php">Registrar</a></li>
+                  <li><a href="../prestamo/listado_prestamo.php">Listado</a></li>
               </ul>
           </li>
           <li>
@@ -46,11 +46,13 @@
               </ul>
           </li>
           <div class="footer">
-              <a href="../menu.php">Menu Principal <br><br></a>
-              <a href="../cerrar_sesion.php">Cerrar Sesion</a>
+              <a href="../../menu.php">Menu Principal <br><br></a>
+              <a href="../../cerrar_sesion.php">Cerrar Sesion</a>
           </div>
       </ul> 
     </div>
+    <body>
+      
     <?php
       include("../conexion.php");
 
@@ -58,7 +60,7 @@
     
     $sql2= "SELECT L.cod_libro, L.titulo, L.estado
             FROM libro L
-            WHERE L.estado = 'biblioteca'";
+            WHERE L.estado = 'prestado'";
 
     $res1= mysqli_query($con,$sql1);
     $res2= mysqli_query($con,$sql2);
@@ -101,6 +103,5 @@
         </tr>
       </table>
     </form>
-    <br /><br /><br /><br />
   </body>
 </html>

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="../js/funciones.js"></script>
   <link rel="stylesheet" href="../style.css">
   <title>Document</title>
 </head>
@@ -31,6 +33,13 @@
                     <li><a href="listado_prestamo.php">Listado</a></li>
                 </ul>
             </li>
+            <li>
+              <a href="#">Detalle Prestamos</a>
+              <ul class="items">
+                  <li><a href="../detalle/reg_detalle.php">Registrar</a></li>
+                  <li><a href="../detalle/listado_detalle.php">Listado</a></li>
+              </ul>
+          </li>
             <li>
                 <a href="#">Reparacion</a>
                 <ul class="items">
@@ -74,8 +83,8 @@ else{
       echo "<td>$vec[2]</td>";
       echo "<td>$vec[3]</td>";
       echo "<td>$vec[4]</td>";
-      echo "<td><a href='mod.php?id=$vec[0]'>Modificar</a></td>";
-      echo "<td><a href='elim.php?id=$vec[0]'>Eliminar</a></td>";
+      echo "<td><a href='mod_prestamo.php?id=$vec[0]'>Modificar</a></td>";
+      echo "<td><a href='eliminar.php?id=$vec[0]' onclick='return confirmar();'>Eliminar</a></td>";
       echo "</tr>";
     }echo"</table>";
 }

@@ -48,6 +48,13 @@ include('../validar_sesion.php');
                     <li><a href="reparacion/listado_reparacion.php">Listado</a></li>
                 </ul>
             </li>
+            <li>
+                <a href="#">Actividades</a>
+                <ul class="items">
+                    <li><a href="actividades/punto8.php">Punto 8</a></li>
+                    <li><a href="actividades/punto9.php">Punto 9</a></li>
+                </ul>
+            </li>
             <div class="footer">
                 <a href="../menu.php">Menu Principal <br><br></a>
                 <a href="../cerrar_sesion.php">Cerrar Sesion</a>

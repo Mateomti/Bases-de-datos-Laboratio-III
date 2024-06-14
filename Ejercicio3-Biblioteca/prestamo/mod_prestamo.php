@@ -1,25 +1,26 @@
 <?php
-include('../conexion.php');
-
-$sql = "SELECT socio.nomyape, socio.cod_socio from socio";
-
+include("../conexion.php");
+$id = $_GET['id'];
+$sql = "SELECT P.* FROM prestamo P, socio S
+        WHERE P.cod_prestamo = $id";
+$sql2 = "SELECT * FROM socio";
+$res2 = mysqli_query($con,$sql2);
 $res = mysqli_query($con, $sql);
-
-
+$vec = mysqli_fetch_array($res);
 ?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
     <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="../js/funciones.js"></script>
-    
-    <title>Document</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Modificar Prestamo</title>
   </head>
   <body>
-  <div class="conteiner">
+    <div class="conteiner">
         <ul class="nav-bar">
             <a href="../index.php">Inicio <br> <br> <br></a>
             <li>
@@ -63,33 +64,41 @@ $res = mysqli_query($con, $sql);
             </div>
         </ul>
     </div>
-    <form class="formulario" action="proc_reg.php" method="post" onsubmit="return validarFechas(event);">
+    <form class="formulario" action="proc_mod.php" method="post">
       <table class="tabla">
         <tr>
-          <td><label for='socio'>Socio</label></td>
+          <td><label for="cod">Codigo del prestamo</label></td>
+          <td><input type="number" name="cod" id="cod" value="<?php echo$vec[0];?>" readonly /></td>
+        </tr>
+        <tr>
+          <td><label for="socio">Socio</label></td>
           <td>
-            <select name='socio' id="socio">
+            <select name="socio" id="socio">
               <?php
-                while($vec = mysqli_fetch_array($res)){
-                  echo"<option value='$vec[1]'>$vec[0]</option>";
+                while($vec1 = mysqli_fetch_array($res2)){
+                  if($vec1[0] == $vec[1]){
+                    echo"<option selected value='$vec1[0]'>$vec1[1]</option>";
+                  }
+                  else{
+                    echo"<option  value='$vec1[0]'>$vec1[1]</option>";
+                  }
                 }
               ?>
-            </select>
-          </td>
+            </select></td>
         </tr>
         <tr>
-          <td><label for="prestamo">fecha de prestamo</label></td>
-          <td><input type="date" name="prestamo" id="prestamo" /></td>
+          <td><label for="ingreso">Fecha Prestamo</label></td>
+          <td><input type="date" name="ingreso" id="ingreso" value="<?php echo$vec[2]; ?>"/></td>
         </tr>
         <tr>
-          <td><label for="devolucion">fecha de devolucion</label></td>
-          <td><input type="date" name="devolucion" id="devolucion" /></td>
+          <td><label for="egreso">Fecha Egreso</label></td>
+          <td><input type="date" name="devolucion" id="devolucion" value="<?php echo$vec[3]; ?>"/></td>
         </tr>
         <tr>
           <td><label for="estado">estado</label></td>
           <td>
-            <input type="text" name="estado" id="estado" readonly/>
-            <button type="button" name ="ver " id="ver" onclick="Estado();">Ver</button>
+            <input type="text" name="estado" id="estado" value="<?php echo$vec[4];?>"readonly/>
+            <button type="button" name ="ver " id="ver" onclick="return Estado();">Ver</button>
           </td>
         </tr>
         <tr>

@@ -1,21 +1,27 @@
 <?php
-include("../conexion.php");
-$id = $_GET["id"];
-$sql = "SELECT R.*, L.cod_libro, L.titulo FROM reparacion R, libro L WHERE R.cod_reparacion = $id AND R.cod_libro = L.cod_libro";
-$sql2 = "SELECT * FROM libro";
-$res2 = mysqli_query($con, $sql2);
+include('../conexion.php');
+
+$cod = $_GET['cod'];
+$socio = "SELECT * FROM socio";
+$ress = mysqli_query($con, $socio);
+$libro = "SELECT * FROM libro WHERE estado = 'Prestado'";
+$resl = mysqli_query($con, $libro);
+
+$sql = "SELECT D.* FROM detalleprestamo D, socio S WHERE D.cod_detalle = $cod";
 $res = mysqli_query($con, $sql);
 $vec = mysqli_fetch_array($res);
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css">
-    <title>Document</title>
+    <title>Detalle de Prestamos</title>
   </head>
-  <body><div class="conteiner">
+  <body>
+  <div class="conteiner">
       <ul class="nav-bar">
           <a href="../index.php">Inicio <br> <br> <br></a>
           <li>
@@ -42,15 +48,15 @@ $vec = mysqli_fetch_array($res);
           <li>
               <a href="#">Detalle Prestamos</a>
               <ul class="items">
-                  <li><a href="../detalle/reg_detalle.php">Registrar</a></li>
-                  <li><a href="../detalle/listado_detalle.php">Listado</a></li>
+                  <li><a href="reg_detalle.php">Registrar</a></li>
+                  <li><a href="listado_detalle.php">Listado</a></li>
               </ul>
           </li>
           <li>
               <a href="#">Reparacion</a>
               <ul class="items">
-                  <li><a href="reg_reparacion.php">Registrar</a></li>
-                  <li><a href="listado_reparacion.php">Listado</a></li>
+                  <li><a href="../reparacion/reg_reparacion.php">Registrar</a></li>
+                  <li><a href="../reparacion/listado_reparacion.php">Listado</a></li>
               </ul>
           </li>
           <div class="footer">
@@ -59,39 +65,36 @@ $vec = mysqli_fetch_array($res);
           </div>
       </ul> 
     </div>
-    <form class="formulario" action="proc_mod_reparacion.php" method="post">
+    <body>
+    <form class="formulario" action="proc_mod_detalle.php" method="post">
       <table class="tabla">
-        <tr>
-          <td><label for="id">Codigo</label></td>
-          <td><input type="text" name="id" id="id" value="<?php echo$vec[0]; ?>" readonly /></td>
+      <tr>
+          <td><label for="codigo">Codigo</label></td>
+          <td><input type="number" name="codigo" id="codigo" value="<?php echo$vec[0]; ?>" readonly/></td>
         </tr>
         <tr>
-          <td><label for="ingreso">Ingreso</label></td>
-          <td><input type="date" name="ingreso" id="ingreso" value="<?php echo$vec[1]; ?>" readonly/></td>
-        </tr>
-        <tr>
-          <td><label for="egreso">Egreso</label></td>
-          <td><input type="date" name="egreso" id="egreso" value="<?php echo $vec[3]; ?>"/></td>
-        </tr>
-        <tr>
-          <td><label for="motivo">Motivo</label></td>
-          <td><input type="text" name="motivo" id="motivo" value="<?php echo $vec[2]; ?>"/></td>
+          <td><label for="socio">Socio</label></td>
+          <td><select name="socio" id="socio">
+            <?php
+              while($socios = mysqli_fetch_array($ress)){
+                  echo" <option value='$socios[0]'> $socios[1] </option>";
+              }
+            ?>
+          </select></td>
         </tr>
         <tr>
           <td><label for="libro">Libro</label></td>
-          <td>
-            <select name="libro" id="libro">
-              <?php
-                while($vec1 = mysqli_fetch_array($res2)){
-                  if($vec1[0] == $vec[5]){
-                    echo"<option selected value='$vec1[0]'>$vec1[1]</option>";
-                  }
-                  else{
-                    echo"<option  value='$vec1[0]'>$vec1[1]</option>";
-                  }
-                }
-              ?>
-            </select></td>
+          <td><select name="libro" id="libro">
+            <?php
+              while($libro = mysqli_fetch_array($resl)){
+                  echo" <option value='$libro[0]'> $libro[1] </option>";
+              }
+            ?>
+          </select></td>
+        </tr>
+        <tr>
+          <td><label for="observacion">observaciones</label></td>
+          <td><input type="text" name="observacion" id="observacion" /></td>
         </tr>
         <tr>
           <td colspan="2">
@@ -103,6 +106,7 @@ $vec = mysqli_fetch_array($res);
         </tr>
       </table>
     </form>
-    <br /><br /><br /><br />
+
+
   </body>
 </html>

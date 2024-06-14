@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
+  <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="../js/funciones.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -31,6 +33,13 @@
                     <li><a href="../prestamo/listado_prestamo.php">Listado</a></li>
                 </ul>
             </li>
+            <li>
+              <a href="#">Detalle Prestamos</a>
+              <ul class="items">
+                  <li><a href="../detalle/reg_detalle.php">Registrar</a></li>
+                  <li><a href="../detalle/listado_detalle.php">Listado</a></li>
+              </ul>
+          </li>
             <li>
                 <a href="#">Reparacion</a>
                 <ul class="items">
@@ -76,7 +85,7 @@ else{
       echo"<td>$vec[4]</td>";
       echo"<td>$vec[5]</td>";
       echo"<td><a href='mod_socio.php?cod=$vec[0]'>Modificar</a></td>";
-      echo"<td><a href='del_socio.php?cod=$vec[0]'>Eliminar</a></td>";
+      echo"<td><a href='del_socio.php?cod=$vec[0]' onclick='return confirmar();'>Eliminar</a></td>";
 
 
       echo"</tr>";

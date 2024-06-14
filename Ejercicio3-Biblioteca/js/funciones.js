@@ -40,17 +40,14 @@ function Punto1(event){
 function Estado() {
   var fechaEgreso = $('#devolucion').val();
 
-  // Obtener la fecha actual sin la hora
   var fecha_actual = new Date();
 
-  // Convertir la fecha de egreso a objeto Date
   var dateEgreso = new Date(fechaEgreso);
 
-  // Comparar las fechas
   if (dateEgreso > fecha_actual) {
       $('#estado').val('En prestamo');
   } else {
       $('#estado').val('Finalizado');
   }
-  }
+}
 

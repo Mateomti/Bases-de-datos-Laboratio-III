@@ -35,6 +35,13 @@ include('../../validar_sesion.php');
                 </ul>
             </li>
             <li>
+              <a href="#">Detalle Prestamos</a>
+              <ul class="items">
+                  <li><a href="../detalle/reg_detalle.php">Registrar</a></li>
+                  <li><a href="../detalle/listado_detalle.php">Listado</a></li>
+              </ul>
+          </li>
+            <li>
                 <a href="#">Reparacion</a>
                 <ul class="items">
                     <li><a href="../reparacion/reg_reparacion.php">Registrar</a></li>
@@ -71,11 +78,13 @@ include('../../validar_sesion.php');
         </tr>
         <tr>
           <td><label for="estado">estado</label></td>
-          <td><select name="estado" id="estado">
-            <option value="biblioteca">biblioteca</option>
-            <option value="prestado">prestado</option>
-            <option value="reparacion">reparacion</option>
-          </select></td>
+            <td>
+            <select name="estado" id="estado">
+              <option value="En Biblioteca">En Biblioteca</option>
+              <option value="Prestado">Prestado</option>
+              <option value="En Reparacion">En Reparacion</option>
+            </select>
+          </td>
         </tr>
         <tr>
           <td colspan="2">
