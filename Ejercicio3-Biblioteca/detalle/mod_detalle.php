@@ -2,12 +2,19 @@
 include('../conexion.php');
 
 $cod = $_GET['cod'];
-$socio = "SELECT * FROM socio";
-$ress = mysqli_query($con, $socio);
-$libro = "SELECT * FROM libro WHERE estado = 'Prestado'";
-$resl = mysqli_query($con, $libro);
 
-$sql = "SELECT D.* FROM detalleprestamo D, socio S WHERE D.cod_detalle = $cod";
+$sql1= "SELECT P.cod_prestamo, S.nomyape, S.cod_socio 
+        FROM prestamo P, socio S 
+        WHERE P.cod_socio = S.cod_socio";
+$res1= mysqli_query($con,$sql1);
+
+$sql2= "SELECT L.cod_libro, L.titulo, L.estado
+        FROM libro L
+        WHERE L.estado = 'prestado'";
+$res2= mysqli_query($con,$sql2);
+    
+$sql = "SELECT D.* FROM detalleprestamo D
+        WHERE D.cod_detalle = $cod";
 $res = mysqli_query($con, $sql);
 $vec = mysqli_fetch_array($res);
 ?>
@@ -73,11 +80,16 @@ $vec = mysqli_fetch_array($res);
           <td><input type="number" name="codigo" id="codigo" value="<?php echo$vec[0]; ?>" readonly/></td>
         </tr>
         <tr>
-          <td><label for="socio">Socio</label></td>
+          <td><label for="socio">Prestamo - Socio</label></td>
           <td><select name="socio" id="socio">
             <?php
-              while($socios = mysqli_fetch_array($ress)){
-                  echo" <option value='$socios[0]'> $socios[1] </option>";
+              while($socios = mysqli_fetch_array($res1)){
+                if($socios[0] == $vec[1]){
+                  echo"<option selected value='$socios[0]'>$socios[0] - $socios[1]</option>";
+                }
+                else{
+                  echo"<option  value='$socios[0]'>$socios[0] - $socios[1]</option>";
+                }
               }
             ?>
           </select></td>
@@ -86,21 +98,26 @@ $vec = mysqli_fetch_array($res);
           <td><label for="libro">Libro</label></td>
           <td><select name="libro" id="libro">
             <?php
-              while($libro = mysqli_fetch_array($resl)){
-                  echo" <option value='$libro[0]'> $libro[1] </option>";
+            while($libro = mysqli_fetch_array($res2)){
+              if($libro[0] == $vec[2]){
+                echo"<option selected value='$libro[0]'>$libro[1]</option>";
               }
+              else{
+                echo"<option  value='$libro[0]'>$libro[1]</option>";
+              }
+            }
             ?>
           </select></td>
         </tr>
         <tr>
-          <td><label for="observacion">observaciones</label></td>
+          <td><label for="observacion">Observaciones</label></td>
           <td><input type="text" name="observacion" id="observacion" /></td>
         </tr>
         <tr>
           <td colspan="2">
             <center>
-              <button type="submit">enviar</button>
-              <button type="reset">reset</button>
+              <button type="submit">Enviar</button>
+              <button type="reset">Reset</button>
             </center>
           </td>
         </tr>

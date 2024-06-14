@@ -44,11 +44,15 @@
               </ul>
             </li>
             <li>
-                <a href="#">Actividades</a>
-                <ul class="items">
-                    <li><a href="punto8.php">Punto 8</a></li>
-                    <li><a href="punto9.php">Punto 9</a></li>
-                </ul>
+              <a href="#">Actividades</a>
+              <ul class="acts">
+                <li><a href="punto8.php">Punto 8</a></li>
+                <li><a href="punto9.php">Punto 9</a></li>
+                <li><a href="punto10.php">Punto 10</a></li>
+                <li><a href="punto11.php">Punto 11</a></li>
+                <li><a href="punto12.php">Punto 12</a></li>
+                <li><a href="punto13.php">Punto 13</a></li>
+            </ul>
             </li>
           <div class="footer">
               <a href="../../menu.php">Menu Principal <br><br></a>

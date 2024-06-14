@@ -60,7 +60,7 @@
     
     $sql2= "SELECT L.cod_libro, L.titulo, L.estado
             FROM libro L
-            WHERE L.estado = 'prestado'";
+            WHERE L.estado = 'Prestado'";
 
     $res1= mysqli_query($con,$sql1);
     $res2= mysqli_query($con,$sql2);

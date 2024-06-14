@@ -50,10 +50,14 @@ include('../validar_sesion.php');
             </li>
             <li>
                 <a href="#">Actividades</a>
-                <ul class="items">
+                <ul class="acts">
                     <li><a href="actividades/punto8.php">Punto 8</a></li>
                     <li><a href="actividades/punto9.php">Punto 9</a></li>
-                </ul>
+                    <li><a href="actividades/punto10.php">Punto 10</a></li>
+                    <li><a href="actividades/punto11.php">Punto 11</a></li>
+                    <li><a href="actividades/punto12.php">Punto 12</a></li>
+                    <li><a href="actividades/punto13.php">Punto 13</a></li>
+            </ul>
             </li>
             <div class="footer">
                 <a href="../menu.php">Menu Principal <br><br></a>

@@ -72,7 +72,7 @@ else{
         <td>Motivo</td>
         <td>Egreso</td>
         <td>Libro</td>
-        <td>Finalizar</td>
+        <td>Modificar</td>
         <td>Eliminar</td>
       </tr>
   <?php
@@ -88,7 +88,7 @@ else{
     echo "<td>$vec[5]</td>";
 
     
-    echo "<td><a href='mod_reparacion.php?id=$vec[0]'>Finalizar</a></td>";
+    echo "<td><a href='mod_reparacion.php?id=$vec[0]'>Modificar</a></td>";
     echo "<td><a href='eliminar_reparacion.php?id=$vec[0]' onclick='return confirmar();'>Eliminar</a></td>";
     echo "</tr>";
   }

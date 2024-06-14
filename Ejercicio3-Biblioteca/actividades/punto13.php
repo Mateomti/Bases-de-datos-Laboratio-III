@@ -52,7 +52,7 @@
               <li><a href="punto11.php">Punto 11</a></li>
               <li><a href="punto12.php">Punto 12</a></li>
               <li><a href="punto13.php">Punto 13</a></li>
-          </ul>
+            </ul>
           </li>
           <div class="footer">
               <a href="../../menu.php">Menu Principal <br><br></a>
@@ -61,21 +61,19 @@
       </ul> 
     </div>
     <body>
-      
       <?php
         include('../conexion.php');
-        $fecha = new DateTime('2006-01-01');
-        $fechaformateada = $fecha->format('Y-m-d');
-        $cons ="SELECT S.*, P.cod_prestamo, D.cod_prestamo, L.* 
-                FROM socio S, detalleprestamo D, prestamo P, libro L 
-                WHERE S.fnacimiento > '2006-01-01' 
-                AND S.cod_socio = P.cod_socio 
-                AND D.cod_prestamo = P.cod_prestamo
-                AND D.cod_libro = L.cod_libro";
+        $hoy = new DateTime();
+        $fecha = $hoy->format('Y-m-d');
+        $cons ="SELECT DISTINCT R.cod_reparacion, R.fingreso, R.motivo, L.titulo, L.estado
+                FROM reparacion R
+                JOIN libro L ON R.cod_libro = L.cod_libro
+                WHERE L.estado = 'En reparacion' 
+                AND (R.fegreso = '0000-00-00' OR R.fegreso > '$fecha')";
         $res = mysqli_query($con, $cons);
         if ($res == false){
           echo "
-          <script> alert ('No se han encontrado socios menores de edad');
+          <script> alert ('No se han encontrado Reparaciones sin fecha de egreso');
           window.location.href = '../index.php';
           </script>";
         }else{
@@ -83,29 +81,23 @@
             <div class="formulario">
                 <table class="tabla" >
                 <tr>
-                    <th>Titulo</th>
-                    <th>Editorial</th>
-                    <th>Edicion</th>
-                    <th>Idioma</th>
-                    <th>Paginas</th>
-                    <th>Estado</th>
-                    <th>Socio</th>
-                    <th>Fecha de nacimiento</th>
-
+                    <td>Reparacion</td>
+                    <td>Fecha Ingreso</td>
+                    <td>Motivo</td>
+                    <td>Libro</td>
+                    <td>Estado</td>
                 </tr>
                 <?php
-                while($vec = mysqli_fetch_array($res)) {
-                echo "<tr>";
-                echo "<td>$vec[9]</td>";
-                echo "<td>$vec[10]</td>";
-                echo "<td>$vec[11]</td>";
-                echo "<td>$vec[12]</td>";
-                echo "<td>$vec[13]</td>";
-                echo "<td>$vec[14]</td>";
-                echo "<td>$vec[1]</td>";
-                echo "<td>$vec[2]</td>";
-                echo "</tr>";
-            }echo "</table>";
+                while($vec = mysqli_fetch_assoc($res)) {
+                  echo "<tr>";
+                  echo "<td>{$vec['cod_reparacion']}</td>";
+                  echo "<td>{$vec['fingreso']}</td>";
+                  echo "<td>{$vec['motivo']}</td>";
+                  echo "<td>{$vec['titulo']}</td>";
+                  echo "<td>{$vec['estado']}</td>";
+                  echo "</tr>";
+                }
+                echo "</table>";
         }
       
     ?>

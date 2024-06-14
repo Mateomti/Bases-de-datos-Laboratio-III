@@ -28,7 +28,7 @@ include('validar_sesion.php');
       <tr>
         <td class="ltd">
           <a href="Ejercicio1-Colegio/index.php" id="ej1">
-            <center><img src="Usuarios/img/colegio.png" /></center>
+            <center><img src="Usuarios/img/colegioo.png" /></center>
           </a>
           <p><center>Ejercicio 1 <br> Colegio</center></p>
         </td>
@@ -40,13 +40,13 @@ include('validar_sesion.php');
         </td>
         <td class="ltd">
           <a href="Ejercicio3-Biblioteca/index.php"
-            ><center><img src="Usuarios/img/colegio.png" /></center
+            ><center><img src="Usuarios/img/biblioteca.png" /></center
           ></a>
           <p><center>Ejercicio 3 <br> Biblioteca</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="Usuarios/img/coming_soon.jpg" /></center
+            ><center><img src="Usuarios/img/cs.png" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
@@ -54,25 +54,25 @@ include('validar_sesion.php');
       <tr>
         <td class="ltd">
           <a href="#"
-            ><center><img src="Usuarios/img/coming_soon.jpg" /></center
+            ><center><img src="Usuarios/img/cs.png" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="Usuarios/img/coming_soon.jpg" /></center
+            ><center><img src="Usuarios/img/cs.png" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="Usuarios/img/coming_soon.jpg" /></center
+            ><center><img src="Usuarios/img/cs.png" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
         <td class="ltd">
           <a href="#"
-            ><center><img src="Usuarios/img/coming_soon.jpg" /></center
+            ><center><img src="Usuarios/img/cs.png" /></center
           ></a>
           <p><center>Proximamente...</center></p>
         </td>
