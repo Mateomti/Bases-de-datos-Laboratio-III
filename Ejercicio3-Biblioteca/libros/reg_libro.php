@@ -23,22 +23,22 @@ include('../../validar_sesion.php');
             <li>
                 <a href="#">Socios</a>
                 <ul class="items">
-                    <li><a href="">Registrar</a></li>
-                    <li><a href="">Listado</a></li>
+                    <li><a href="../socio/reg_socio.php">Registrar</a></li>
+                    <li><a href="../socio/listado_socio.php">Listado</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#">Prestamos</a>
                 <ul class="items">
-                    <li><a href="">Registrar</a></li>
-                    <li><a href="">Listado</a></li>
+                    <li><a href="../prestamo/reg_prestamo.php">Registrar</a></li>
+                    <li><a href="../prestamo/listado_prestamo.php">Listado</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#">Reparacion</a>
                 <ul class="items">
-                    <li><a href="">Registrar</a></li>
-                    <li><a href="">Listado</a></li>
+                    <li><a href="../reparacion/reg_reparacion.php">Registrar</a></li>
+                    <li><a href="../reparacion/listado_reparacion.php">Listado</a></li>
                 </ul>
             </li>
             <div class="footer">
@@ -47,7 +47,6 @@ include('../../validar_sesion.php');
             </div>
         </ul>
     </div>
-    <h1 ><center>Registro de libros</center></h1>
     <form class="formulario" action="proc_reg.php" method="post">
       <table class="tabla" >
         <tr>

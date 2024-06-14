@@ -42,14 +42,13 @@ function Estado() {
 
   // Obtener la fecha actual sin la hora
   var fecha_actual = new Date();
-  fecha_actual.setHours(0, 0, 0, 0); // Resetea la hora a las 00:00:00 para evitar problemas de comparación
 
   // Convertir la fecha de egreso a objeto Date
   var dateEgreso = new Date(fechaEgreso);
 
   // Comparar las fechas
   if (dateEgreso > fecha_actual) {
-      $('#estado').val('Prestamo');
+      $('#estado').val('En prestamo');
   } else {
       $('#estado').val('Finalizado');
   }

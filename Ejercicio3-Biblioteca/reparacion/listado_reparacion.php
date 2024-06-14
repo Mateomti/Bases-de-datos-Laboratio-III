@@ -7,7 +7,50 @@
   <title>Document</title>
 </head>
 <body>
-  <a href="../index.php">Menu</a>
+<div class="conteiner">
+      <ul class="nav-bar">
+          <a href="../index.php">Inicio <br> <br> <br></a>
+          <li>
+              <a href="#">Libros</a>
+              <ul class="items">
+                  <li><a href="libros/reg_libro.php">Registrar</a></li>
+                  <li><a href="libros/listado_libro.php">Listado</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Socios</a>
+              <ul class="items">
+                  <li><a href="socio/reg_socio.php">Registrar</a></li>
+                  <li><a href="socio/listado_socio.php">Listado</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Prestamos</a>
+              <ul class="items">
+                  <li><a href="prestamo/reg_prestamo.php">Registrar</a></li>
+                  <li><a href="prestamo/listado_prestamo.php">Listado</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Detalle Prestamos</a>
+              <ul class="items">
+                  <li><a href="detalle/reg_detalle.php">Registrar</a></li>
+                  <li><a href="detalle/listado_detalle.php">Listado</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Reparacion</a>
+              <ul class="items">
+                  <li><a href="reg_reparacion.php">Registrar</a></li>
+                  <li><a href="listado_reparacion.php">Listado</a></li>
+              </ul>
+          </li>
+          <div class="footer">
+              <a href="../menu.php">Menu Principal <br><br></a>
+              <a href="../cerrar_sesion.php">Cerrar Sesion</a>
+          </div>
+      </ul> 
+    </div>
 <?php
 include("../conexion.php");
 

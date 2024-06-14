@@ -10,20 +10,55 @@ $vec = mysqli_fetch_array($res);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
   </head>
-  <body>
-    <h1><center>Finalizar Reparacion</center></h1>
-    <center><a href="../index.php">Menu</a></center>
-    <br /><br />
-    <form action="proc_mod_reparacion.php" method="post">
-      <table
-        align="center"
-        border="1"
-        bgcolor="grey"
-        cellpadding="20"
-        cellspacing="2"
-      >
+  <body><div class="conteiner">
+      <ul class="nav-bar">
+          <a href="../index.php">Inicio <br> <br> <br></a>
+          <li>
+              <a href="#">Libros</a>
+              <ul class="items">
+                  <li><a href="libros/reg_libro.php">Registrar</a></li>
+                  <li><a href="libros/listado_libro.php">Listado</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Socios</a>
+              <ul class="items">
+                  <li><a href="socio/reg_socio.php">Registrar</a></li>
+                  <li><a href="socio/listado_socio.php">Listado</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Prestamos</a>
+              <ul class="items">
+                  <li><a href="prestamo/reg_prestamo.php">Registrar</a></li>
+                  <li><a href="prestamo/listado_prestamo.php">Listado</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Detalle Prestamos</a>
+              <ul class="items">
+                  <li><a href="detalle/reg_detalle.php">Registrar</a></li>
+                  <li><a href="detalle/listado_detalle.php">Listado</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Reparacion</a>
+              <ul class="items">
+                  <li><a href="reg_reparacion.php">Registrar</a></li>
+                  <li><a href="listado_reparacion.php">Listado</a></li>
+              </ul>
+          </li>
+          <div class="footer">
+              <a href="../menu.php">Menu Principal <br><br></a>
+              <a href="../cerrar_sesion.php">Cerrar Sesion</a>
+          </div>
+      </ul> 
+    </div>
+    <form class="formulario" action="proc_mod_reparacion.php" method="post">
+      <table class="tabla">
         <tr>
           <td><label for="id">Codigo</label></td>
           <td><input type="text" name="id" id="id" value="<?php echo$vec[0]; ?>" readonly /></td>

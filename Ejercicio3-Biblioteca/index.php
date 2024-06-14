@@ -31,14 +31,14 @@ include('../validar_sesion.php');
                 <a href="#">Prestamos</a>
                 <ul class="items">
                     <li><a href="prestamo/reg_prestamo.php">Registrar</a></li>
-                    <li><a href="prestamo/listado_prestamos.php">Listado</a></li>
+                    <li><a href="prestamo/listado_prestamo.php">Listado</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#">Detalle Prestamos</a>
                 <ul class="items">
                     <li><a href="detalle/reg_detalle.php">Registrar</a></li>
-                    <li><a href="detalle/">Listado</a></li>
+                    <li><a href="detalle/listado_detalle.php">Listado</a></li>
                 </ul>
             </li>
             <li>

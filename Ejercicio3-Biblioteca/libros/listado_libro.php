@@ -13,7 +13,7 @@ include('../../validar_sesion.php');
     <title>Ejercicio 3</title>
 </head>
 <body>
-    <div class="conteiner">
+<div class="conteiner">
         <ul class="nav-bar">
             <a href="../index.php">Inicio <br> <br> <br></a>
             <li>
@@ -26,22 +26,22 @@ include('../../validar_sesion.php');
             <li>
                 <a href="#">Socios</a>
                 <ul class="items">
-                    <li><a href="">Registrar</a></li>
-                    <li><a href="">Listado</a></li>
+                    <li><a href="../socio/reg_socio.php">Registrar</a></li>
+                    <li><a href="../socio/listado_socio.php">Listado</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#">Prestamos</a>
                 <ul class="items">
-                    <li><a href="">Registrar</a></li>
-                    <li><a href="">Listado</a></li>
+                    <li><a href="../prestamo/reg_prestamo.php">Registrar</a></li>
+                    <li><a href="../prestamo/listado_prestamo.php">Listado</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#">Reparacion</a>
                 <ul class="items">
-                    <li><a href="">Registrar</a></li>
-                    <li><a href="">Listado</a></li>
+                    <li><a href="../reparacion/reg_reparacion.php">Registrar</a></li>
+                    <li><a href="../reparacion/listado_reparacion.php">Listado</a></li>
                 </ul>
             </li>
             <div class="footer">

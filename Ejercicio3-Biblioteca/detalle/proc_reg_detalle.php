@@ -5,7 +5,7 @@
       $libro = $_POST["libro"];
       $observacion = $_POST["observacion"];
 
-      $sql = "INSERT INTO detalle_prestamo (cod_prestamo, cod_libro, observaciones)
+      $sql = "INSERT INTO detalleprestamo (cod_prestamo, cod_libro, observaciones)
               VALUES ('$sos','$libro','$observacion')";
 
       $res = mysqli_query($con, $sql);

@@ -20,15 +20,15 @@
             <li>
                 <a href="#">Socios</a>
                 <ul class="items">
-                    <li><a href="reg_socio.php">Registrar</a></li>
-                    <li><a href="listado_socio.php">Listado</a></li>
+                    <li><a href="../socio/reg_socio.php">Registrar</a></li>
+                    <li><a href="../socio/listado_socio.php">Listado</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#">Prestamos</a>
                 <ul class="items">
-                    <li><a href="../prestamo/reg_prestamo.php">Registrar</a></li>
-                    <li><a href="../prestamo/listado_prestamo.php">Listado</a></li>
+                    <li><a href="reg_prestamo.php">Registrar</a></li>
+                    <li><a href="listado_prestamo.php">Listado</a></li>
                 </ul>
             </li>
             <li>
@@ -44,51 +44,42 @@
             </div>
         </ul>
     </div>
+    
 <?php
 include("../conexion.php");
 
-$sql = "SELECT T.* FROM socio T";
+$sql = "SELECT T.*,  S.nomyape, S.cod_socio FROM prestamo T, socio S WHERE T.cod_socio = S.cod_socio";
 $res = mysqli_query($con, $sql);
 
-if($res==false) {
-  
+if($res == false){
+  echo"error";
+
 }
 else{
   ?>
   <div class="formulario">
   <table class="tabla">
     <tr>
-      <td>Nombre</td>
-      <td>Fecha Nacimiento</td>
-      <td>Direccion</td>
-      <td>Telefono</td>
-      <td>Mail</td>
+      <td>Socio</td>
+      <td>F. Prestamo</td>
+      <td>F. Devolucion</td>
+      <td>Estado</td>
       <td>Modificar</td>
       <td>Eliminar</td>
     </tr>
     <?php
-    while($vec = mysqli_fetch_array($res)){
-      
-      echo"<tr>";
-      echo"<td>$vec[1]</td>";
-      echo"<td>$vec[2]</td>";
-      echo"<td>$vec[3]</td>";
-      echo"<td>$vec[4]</td>";
-      echo"<td>$vec[5]</td>";
-      echo"<td><a href='mod_socio.php?cod=$vec[0]'>Modificar</a></td>";
-      echo"<td><a href='del_socio.php?cod=$vec[0]'>Eliminar</a></td>";
-
-
-      echo"</tr>";
-
-    }echo"</table>";}
+    while($vec = mysqli_fetch_array($res)) {
+      echo "<tr>";
+      echo "<td>$vec[5]</td>";
+      echo "<td>$vec[2]</td>";
+      echo "<td>$vec[3]</td>";
+      echo "<td>$vec[4]</td>";
+      echo "<td><a href='mod.php?id=$vec[0]'>Modificar</a></td>";
+      echo "<td><a href='elim.php?id=$vec[0]'>Eliminar</a></td>";
+      echo "</tr>";
+    }echo"</table>";
+}
 ?>
- </div>
-
-
-
-
-
+</div>
 </body>
 </html>
-  
