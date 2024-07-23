@@ -45,10 +45,10 @@ include('validar_sesion.php');
           <p><center>Ejercicio 3 <br> Biblioteca</center></p>
         </td>
         <td class="ltd">
-          <a href="#"
-            ><center><img src="Usuarios/img/cs.png" /></center
+          <a href="Ejercicio4-Tienda/index.php"
+            ><center><img src="Usuarios/img/carrito.png" /></center
           ></a>
-          <p><center>Proximamente...</center></p>
+          <p><center>Ejercicio 4 <br> Tienda.</center></p>
         </td>
       </tr>
       <tr>
